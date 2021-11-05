@@ -1906,13 +1906,10 @@ a.fg-light:focus {
   position: relative;
   margin: 15px auto;
   width: auto;
-  max-width: 500px;
-  border-radius: 12px;
+  max-width: 600px;
+  border-radius: 8px;
   overflow: hidden;
-  -webkit-box-shadow: 0 8px 16px rgba(109, 114, 139, 0.3);
-  box-shadow: 0 8px 16px rgba(109, 114, 139, 0.3);
-  -webkit-transform: skewX(-3deg) rotateX(20deg);
-  transform: skewX(-3deg) rotateX(20deg);
+
 }
 
 .about-img img {
