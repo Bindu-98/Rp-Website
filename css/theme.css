@@ -1330,7 +1330,7 @@ a.fg-light:focus {
   height: 62px;
   position: fixed;
   background-color: #fff;
-  z-index: 200;
+  z-index: 2000;
   width: 100%;
 }
 
@@ -1418,6 +1418,10 @@ a.fg-light:focus {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
+  color: #2f89fc;
+}
+
+.active-drop{
   color: #2f89fc;
 }
 
@@ -1924,7 +1928,7 @@ a.fg-light:focus {
 .purpose{
   background-color: #f2f4fe;
   border-radius: 10px;
-  padding: 16px;
+  padding: 32px;
   margin-bottom: 32px;
   box-shadow: 0 2px 5px rgba(109, 114, 139, 0.158);
 }
@@ -1940,9 +1944,15 @@ a.fg-light:focus {
   margin: 0 16px;
   border-radius: 8px;
   border: solid 1px #e0e0e0;
+  cursor: pointer;
 }
 
-.page-services .card-service h5 {
+.page-services .card-service:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.5s;
+}
+
+.page-services .card-service a h5 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1952,10 +1962,71 @@ a.fg-light:focus {
   margin-top: 40px;
 }
 
+.page-services a {
+text-decoration: none;
+color: #000;
+}
 
 
 
 
+
+
+
+.drop ul {
+  color: rgba(109, 114, 139, 0.75);
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+}
+
+.drop ul li {
+  position: relative;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.drop .drop-nav-item {
+  width: 200px;
+  background-color: rgb(247, 247, 247);
+}
+
+.drop .drop-nav-item:hover {
+  width: 200px;
+  background-color: rgb(233, 233, 233);
+}
+
+.drop ul li a{
+color: rgba(78, 80, 88, 0.75);
+text-decoration: none;
+}
+
+.drop ul li:hover > ul {
+  display: inherit;
+}
+
+.drop  ul li:hover > ul li {
+  display: list-item;
+}
+
+.drop ul li a {
+  display: block;
+}
+
+.drop ul li ul {
+  display: none;
+  position: absolute;
+  /* optional: submenu is same width than parent entry width */
+  min-width: 100%;
+  /* optional: submenu background color */
+  background-color: #aaa;
+}
+.drop ul li ul ul {
+  left: 100%;
+  top: 0;
+}
 
 
 
@@ -2059,11 +2130,7 @@ button.active:hover {
   -o-transform: scale(1.1);
 }
 ul li:hover {
-  transform: translateX(15px);
-  -webkit-transform: translateX(15px);
-  -moz-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  -o-transform: translateX(15px);
+  background-color: rgb(228, 226, 226);
 }
 
 
